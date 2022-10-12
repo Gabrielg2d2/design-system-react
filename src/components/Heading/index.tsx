@@ -1,4 +1,4 @@
-interface HeadingProps {
+export interface HeadingProps {
   children: React.ReactNode;
   size?: "xl" | "2xl" | "3xl" | "4xl";
   component?: "h1" | "h2" | "h3" | "h4";

@@ -1,5 +1,5 @@
-import { Meta, Story } from "@storybook/react";
-import { Heading } from ".";
+import { Meta, Story, StoryObj } from "@storybook/react";
+import { Heading, HeadingProps } from ".";
 
 export default {
   title: "Heading",
@@ -26,30 +26,29 @@ export default {
   },
 } as Meta;
 
-export const Default: Story = (args) => (
-  <Heading {...args}>{args.children}</Heading>
-);
+export const Default: StoryObj<HeadingProps> = {
+  args: {
+    size: "xl",
+    component: "h4",
+  },
+};
 
-export const HXL: Story = (args) => (
-  <Heading size="xl" {...args}>
-    {args.children}
-  </Heading>
-);
+export const H2XL: StoryObj<HeadingProps> = {
+  args: {
+    size: "2xl",
+    component: "h3",
+  },
+};
+export const H3XL: StoryObj<HeadingProps> = {
+  args: {
+    size: "3xl",
+    component: "h4",
+  },
+};
 
-export const H2XL: Story = (args) => (
-  <Heading size="2xl" {...args}>
-    {args.children}
-  </Heading>
-);
-
-export const H3XL: Story = (args) => (
-  <Heading size="3xl" {...args}>
-    {args.children}
-  </Heading>
-);
-
-export const H4XL: Story = (args) => (
-  <Heading size="4xl" {...args}>
-    {args.children}
-  </Heading>
-);
+export const H4XL: StoryObj<HeadingProps> = {
+  args: {
+    size: "4xl",
+    component: "h1",
+  },
+};
