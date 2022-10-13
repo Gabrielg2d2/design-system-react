@@ -1,4 +1,4 @@
-interface TextProps {
+export interface TextProps {
   children: React.ReactNode;
   size?: "sm" | "md" | "lg";
   component?: "p" | "span" | "div";

@@ -1,5 +1,5 @@
 import { Meta, Story } from "@storybook/react";
-import { Text } from ".";
+import { Text, TextProps } from ".";
 
 export default {
   title: "Text",
@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-} as Meta;
+} as Meta<TextProps>;
 
 export const Default: Story = (args) => <Text {...args}>Default</Text>;
 

@@ -24,7 +24,7 @@ export default {
       },
     },
   },
-} as Meta;
+} as Meta<HeadingProps>;
 
 export const Default: StoryObj<HeadingProps> = {
   args: {

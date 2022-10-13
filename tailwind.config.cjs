@@ -13,6 +13,8 @@ module.exports = {
       "4xl": "2.25rem", // 36px
     },
     color: {
+      transparent: "transparent",
+
       gray: {
         900: "#121214",
         800: "#202024",
