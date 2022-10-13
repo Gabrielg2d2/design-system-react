@@ -4,11 +4,13 @@ import { TextInputInput } from "./components/TextInputInput";
 import { TextInputLabel } from "./components/TextInputLabel";
 import { TextInputRoot } from "./components/TextInputRoot";
 
+type IconProps = React.ReactNode;
+
 export interface TextInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
+  iconLeft?: IconProps;
+  iconRight?: IconProps;
 }
 
 export const TextInput = ({
