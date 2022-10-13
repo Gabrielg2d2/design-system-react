@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { TextInput, TextInputProps } from ".";
+import { Envelope } from "phosphor-react";
 
 export default {
   title: "TextInput",
@@ -11,3 +12,15 @@ export default {
 } as Meta<TextInputProps>;
 
 export const Default: StoryObj<TextInputProps> = {};
+
+export const InputIconLeft: StoryObj<TextInputProps> = {
+  args: {
+    iconLeft: <Envelope />,
+  },
+};
+
+export const InputIconRight: StoryObj<TextInputProps> = {
+  args: {
+    iconRight: <Envelope />,
+  },
+};
