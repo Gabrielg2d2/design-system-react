@@ -3,12 +3,13 @@ import { CheckboxLabel } from "./components/CheckboxLabel";
 
 export interface CheckboxProps {
   label?: string;
+  className?: string;
 }
 
-export function Checkbox({ label, ...props }: CheckboxProps) {
+export function Checkbox({ label, className, ...props }: CheckboxProps) {
   return (
     <CheckboxLabel label={label}>
-      <CheckboxInput {...props} />
+      <CheckboxInput className={className} {...props} />
     </CheckboxLabel>
   );
 }

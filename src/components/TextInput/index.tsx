@@ -26,7 +26,7 @@ export const TextInput = ({
   ...rest
 }: TextInputProps) => {
   return (
-    <>
+    <div className="flex-col space-y-2">
       <TextInputLabel label={label} classNameLabel={classNameLabel} />
       <TextInputRoot>
         <TextInputIconLeft classNameIcon={classNameIcon}>
@@ -37,6 +37,6 @@ export const TextInput = ({
           {iconRight}
         </TextInputIconRight>
       </TextInputRoot>
-    </>
+    </div>
   );
 };
