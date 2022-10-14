@@ -1,12 +1,13 @@
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  className?: string;
 }
 
-export function Button({ children, ...rest }: ButtonProps) {
+export function Button({ children, className, ...rest }: ButtonProps) {
   return (
     <button
-      className="py-4 px-3 bg-cyan-500 rounded text-black text-sm w-full transition-colors hover:bg-cyan-300 focus:ring-2 ring-white"
+      className={`py-4 px-3 bg-cyan-500 rounded text-black text-sm w-full transition-colors hover:bg-cyan-300 focus:ring-2 ring-white ${className}`}
       {...rest}
     >
       {children}

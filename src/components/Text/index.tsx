@@ -26,7 +26,7 @@ export function Text({
 
   return (
     <Component
-      className={`${color(size)} text-gray-100 font-sans ${className}`}
+      className={`text-gray-100 font-sans ${color(size)} ${className}`}
     >
       {children}
     </Component>

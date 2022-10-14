@@ -11,21 +11,31 @@ export interface TextInputProps
   label?: string;
   iconLeft?: IconProps;
   iconRight?: IconProps;
+  classNameInput?: string;
+  classNameLabel?: string;
+  classNameIcon?: string;
 }
 
 export const TextInput = ({
   label,
   iconLeft,
   iconRight,
+  classNameInput,
+  classNameLabel,
+  classNameIcon,
   ...rest
 }: TextInputProps) => {
   return (
     <>
-      <TextInputLabel label={label} />
+      <TextInputLabel label={label} classNameLabel={classNameLabel} />
       <TextInputRoot>
-        <TextInputIconLeft>{iconLeft}</TextInputIconLeft>
-        <TextInputInput {...rest} />
-        <TextInputIconRight>{iconRight}</TextInputIconRight>
+        <TextInputIconLeft classNameIcon={classNameIcon}>
+          {iconLeft}
+        </TextInputIconLeft>
+        <TextInputInput className={classNameInput} {...rest} />
+        <TextInputIconRight classNameIcon={classNameIcon}>
+          {iconRight}
+        </TextInputIconRight>
       </TextInputRoot>
     </>
   );

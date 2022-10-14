@@ -2,6 +2,7 @@ export interface HeadingProps {
   children: React.ReactNode;
   size?: "xl" | "2xl" | "3xl" | "4xl";
   component?: "h1" | "h2" | "h3" | "h4";
+  className?: string;
 }
 
 function color(size: string) {
@@ -21,11 +22,14 @@ export function Heading({
   children,
   size = "xl",
   component = "h1",
+  className,
 }: HeadingProps) {
   const Component = component as keyof JSX.IntrinsicElements;
 
   return (
-    <Component className={`${color(size)} text-gray-100 font-sans`}>
+    <Component
+      className={`${color(size)} text-gray-100 font-sans ${className}`}
+    >
       {children}
     </Component>
   );
